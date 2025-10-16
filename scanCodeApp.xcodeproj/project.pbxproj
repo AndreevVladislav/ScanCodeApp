@@ -1,0 +1,488 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		83C55D642EA11F9800915A46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83C55D602EA11F9800915A46 /* Assets.xcassets */; };
+		83C55D652EA11F9800915A46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C55D612EA11F9800915A46 /* ContentView.swift */; };
+		83C55D662EA11F9800915A46 /* ScanCodeAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C55D622EA11F9800915A46 /* ScanCodeAppApp.swift */; };
+		83C55D6D2EA127AE00915A46 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C55D6C2EA127AE00915A46 /* ScannerView.swift */; };
+		83C55D6F2EA127CD00915A46 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C55D6E2EA127CD00915A46 /* HistoryView.swift */; };
+		83C55D712EA127E800915A46 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C55D702EA127E800915A46 /* DetailView.swift */; };
+		83C55D742EA12E2F00915A46 /* ScannedCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C55D732EA12E2F00915A46 /* ScannedCodeView.swift */; };
+		83C55D762EA12E4B00915A46 /* ScannerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C55D752EA12E4B00915A46 /* ScannerCoordinator.swift */; };
+		83C55D782EA12E7F00915A46 /* CameraScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C55D772EA12E7F00915A46 /* CameraScannerView.swift */; };
+		83C55D7A2EA132A700915A46 /* ProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C55D792EA132A700915A46 /* ProductResponse.swift */; };
+		83C55D7C2EA132B700915A46 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C55D7B2EA132B700915A46 /* Product.swift */; };
+		83C55D7E2EA132D000915A46 /* OpenFoodFactsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C55D7D2EA132D000915A46 /* OpenFoodFactsService.swift */; };
+		83C55D802EA1354400915A46 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C55D7F2EA1354400915A46 /* WebView.swift */; };
+		83C55D832EA1377B00915A46 /* CodeScannerModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 83C55D812EA1377B00915A46 /* CodeScannerModel.xcdatamodeld */; };
+		83C55D862EA1383600915A46 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C55D852EA1383600915A46 /* PersistenceController.swift */; };
+		83C55D882EA1384D00915A46 /* ScanStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C55D872EA1384D00915A46 /* ScanStorage.swift */; };
+		83C55D8A2EA13AD300915A46 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C55D892EA13AD300915A46 /* HistoryViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		83C55D522EA11F8500915A46 /* scanCodeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = scanCodeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		83C55D602EA11F9800915A46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		83C55D612EA11F9800915A46 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		83C55D622EA11F9800915A46 /* ScanCodeAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCodeAppApp.swift; sourceTree = "<group>"; };
+		83C55D6C2EA127AE00915A46 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		83C55D6E2EA127CD00915A46 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		83C55D702EA127E800915A46 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		83C55D732EA12E2F00915A46 /* ScannedCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannedCodeView.swift; sourceTree = "<group>"; };
+		83C55D752EA12E4B00915A46 /* ScannerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerCoordinator.swift; sourceTree = "<group>"; };
+		83C55D772EA12E7F00915A46 /* CameraScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraScannerView.swift; sourceTree = "<group>"; };
+		83C55D792EA132A700915A46 /* ProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResponse.swift; sourceTree = "<group>"; };
+		83C55D7B2EA132B700915A46 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		83C55D7D2EA132D000915A46 /* OpenFoodFactsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenFoodFactsService.swift; sourceTree = "<group>"; };
+		83C55D7F2EA1354400915A46 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		83C55D822EA1377B00915A46 /* CodeScannerModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CodeScannerModel.xcdatamodel; sourceTree = "<group>"; };
+		83C55D852EA1383600915A46 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		83C55D872EA1384D00915A46 /* ScanStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanStorage.swift; sourceTree = "<group>"; };
+		83C55D892EA13AD300915A46 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		83C55D4F2EA11F8500915A46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		83C55D492EA11F8500915A46 = {
+			isa = PBXGroup;
+			children = (
+				83C55D632EA11F9800915A46 /* ScanCodeApp */,
+				83C55D532EA11F8500915A46 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		83C55D532EA11F8500915A46 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				83C55D522EA11F8500915A46 /* scanCodeApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		83C55D632EA11F9800915A46 /* ScanCodeApp */ = {
+			isa = PBXGroup;
+			children = (
+				83C55D622EA11F9800915A46 /* ScanCodeAppApp.swift */,
+				83C55D672EA121B800915A46 /* API */,
+				83C55D842EA1382000915A46 /* CoreData */,
+				83C55D682EA121C100915A46 /* Model */,
+				83C55D692EA121C800915A46 /* View */,
+				83C55D6A2EA121CF00915A46 /* ViewModel */,
+				83C55D6B2EA121D700915A46 /* Helpers */,
+			);
+			path = ScanCodeApp;
+			sourceTree = "<group>";
+		};
+		83C55D672EA121B800915A46 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				83C55D7D2EA132D000915A46 /* OpenFoodFactsService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		83C55D682EA121C100915A46 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				83C55D792EA132A700915A46 /* ProductResponse.swift */,
+				83C55D7B2EA132B700915A46 /* Product.swift */,
+				83C55D812EA1377B00915A46 /* CodeScannerModel.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		83C55D692EA121C800915A46 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				83C55D612EA11F9800915A46 /* ContentView.swift */,
+				83C55D722EA12E0A00915A46 /* Scanner */,
+				83C55D6E2EA127CD00915A46 /* HistoryView.swift */,
+				83C55D702EA127E800915A46 /* DetailView.swift */,
+				83C55D7F2EA1354400915A46 /* WebView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		83C55D6A2EA121CF00915A46 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				83C55D892EA13AD300915A46 /* HistoryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		83C55D6B2EA121D700915A46 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				83C55D602EA11F9800915A46 /* Assets.xcassets */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		83C55D722EA12E0A00915A46 /* Scanner */ = {
+			isa = PBXGroup;
+			children = (
+				83C55D6C2EA127AE00915A46 /* ScannerView.swift */,
+				83C55D732EA12E2F00915A46 /* ScannedCodeView.swift */,
+				83C55D752EA12E4B00915A46 /* ScannerCoordinator.swift */,
+				83C55D772EA12E7F00915A46 /* CameraScannerView.swift */,
+			);
+			path = Scanner;
+			sourceTree = "<group>";
+		};
+		83C55D842EA1382000915A46 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				83C55D852EA1383600915A46 /* PersistenceController.swift */,
+				83C55D872EA1384D00915A46 /* ScanStorage.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		83C55D512EA11F8500915A46 /* scanCodeApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83C55D5D2EA11F8800915A46 /* Build configuration list for PBXNativeTarget "scanCodeApp" */;
+			buildPhases = (
+				83C55D4E2EA11F8500915A46 /* Sources */,
+				83C55D4F2EA11F8500915A46 /* Frameworks */,
+				83C55D502EA11F8500915A46 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = scanCodeApp;
+			packageProductDependencies = (
+			);
+			productName = scanCodeApp;
+			productReference = 83C55D522EA11F8500915A46 /* scanCodeApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83C55D4A2EA11F8500915A46 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					83C55D512EA11F8500915A46 = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 83C55D4D2EA11F8500915A46 /* Build configuration list for PBXProject "scanCodeApp" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83C55D492EA11F8500915A46;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 83C55D532EA11F8500915A46 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				83C55D512EA11F8500915A46 /* scanCodeApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		83C55D502EA11F8500915A46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83C55D642EA11F9800915A46 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		83C55D4E2EA11F8500915A46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83C55D782EA12E7F00915A46 /* CameraScannerView.swift in Sources */,
+				83C55D862EA1383600915A46 /* PersistenceController.swift in Sources */,
+				83C55D762EA12E4B00915A46 /* ScannerCoordinator.swift in Sources */,
+				83C55D832EA1377B00915A46 /* CodeScannerModel.xcdatamodeld in Sources */,
+				83C55D6D2EA127AE00915A46 /* ScannerView.swift in Sources */,
+				83C55D7E2EA132D000915A46 /* OpenFoodFactsService.swift in Sources */,
+				83C55D6F2EA127CD00915A46 /* HistoryView.swift in Sources */,
+				83C55D742EA12E2F00915A46 /* ScannedCodeView.swift in Sources */,
+				83C55D652EA11F9800915A46 /* ContentView.swift in Sources */,
+				83C55D7A2EA132A700915A46 /* ProductResponse.swift in Sources */,
+				83C55D882EA1384D00915A46 /* ScanStorage.swift in Sources */,
+				83C55D7C2EA132B700915A46 /* Product.swift in Sources */,
+				83C55D802EA1354400915A46 /* WebView.swift in Sources */,
+				83C55D712EA127E800915A46 /* DetailView.swift in Sources */,
+				83C55D662EA11F9800915A46 /* ScanCodeAppApp.swift in Sources */,
+				83C55D8A2EA13AD300915A46 /* HistoryViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		83C55D5B2EA11F8800915A46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = FATWL7273T;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		83C55D5C2EA11F8800915A46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = FATWL7273T;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		83C55D5E2EA11F8800915A46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FATWL7273T;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ScanCodeApp;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Для сканирования штрих-кодов и QR-кодов";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = VladislavAnrdeev.scanCodeApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		83C55D5F2EA11F8800915A46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FATWL7273T;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ScanCodeApp;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Для сканирования штрих-кодов и QR-кодов";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = VladislavAnrdeev.scanCodeApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		83C55D4D2EA11F8500915A46 /* Build configuration list for PBXProject "scanCodeApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83C55D5B2EA11F8800915A46 /* Debug */,
+				83C55D5C2EA11F8800915A46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83C55D5D2EA11F8800915A46 /* Build configuration list for PBXNativeTarget "scanCodeApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83C55D5E2EA11F8800915A46 /* Debug */,
+				83C55D5F2EA11F8800915A46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		83C55D812EA1377B00915A46 /* CodeScannerModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				83C55D822EA1377B00915A46 /* CodeScannerModel.xcdatamodel */,
+			);
+			currentVersion = 83C55D822EA1377B00915A46 /* CodeScannerModel.xcdatamodel */;
+			name = CodeScannerModel.xcdatamodeld;
+			path = ScanCodeApp/Model/CodeScannerModel.xcdatamodeld;
+			sourceTree = SOURCE_ROOT;
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 83C55D4A2EA11F8500915A46 /* Project object */;
+}
