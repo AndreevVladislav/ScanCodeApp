@@ -24,6 +24,9 @@
 		83C55D862EA1383600915A46 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C55D852EA1383600915A46 /* PersistenceController.swift */; };
 		83C55D882EA1384D00915A46 /* ScanStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C55D872EA1384D00915A46 /* ScanStorage.swift */; };
 		83C55D8A2EA13AD300915A46 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C55D892EA13AD300915A46 /* HistoryViewModel.swift */; };
+		83C55D8D2EA162E600915A46 /* OFFResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C55D8C2EA162E600915A46 /* OFFResponse.swift */; };
+		83C55D8F2EA1630800915A46 /* OFFProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C55D8E2EA1630800915A46 /* OFFProduct.swift */; };
+		83C55D912EA1633200915A46 /* ProductCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C55D902EA1633200915A46 /* ProductCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		83C55D872EA1384D00915A46 /* ScanStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanStorage.swift; sourceTree = "<group>"; };
 		83C55D892EA13AD300915A46 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
 		83C55D8B2EA15D2D00915A46 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		83C55D8C2EA162E600915A46 /* OFFResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OFFResponse.swift; sourceTree = "<group>"; };
+		83C55D8E2EA1630800915A46 /* OFFProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OFFProduct.swift; sourceTree = "<group>"; };
+		83C55D902EA1633200915A46 /* ProductCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +108,9 @@
 			isa = PBXGroup;
 			children = (
 				83C55D792EA132A700915A46 /* ProductResponse.swift */,
+				83C55D8C2EA162E600915A46 /* OFFResponse.swift */,
 				83C55D7B2EA132B700915A46 /* Product.swift */,
+				83C55D8E2EA1630800915A46 /* OFFProduct.swift */,
 				83C55D812EA1377B00915A46 /* CodeScannerModel.xcdatamodeld */,
 			);
 			path = Model;
@@ -116,6 +124,7 @@
 				83C55D6E2EA127CD00915A46 /* HistoryView.swift */,
 				83C55D702EA127E800915A46 /* DetailView.swift */,
 				83C55D7F2EA1354400915A46 /* WebView.swift */,
+				83C55D902EA1633200915A46 /* ProductCardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -230,17 +239,20 @@
 			files = (
 				83C55D782EA12E7F00915A46 /* CameraScannerView.swift in Sources */,
 				83C55D862EA1383600915A46 /* PersistenceController.swift in Sources */,
+				83C55D8D2EA162E600915A46 /* OFFResponse.swift in Sources */,
 				83C55D762EA12E4B00915A46 /* ScannerCoordinator.swift in Sources */,
 				83C55D832EA1377B00915A46 /* CodeScannerModel.xcdatamodeld in Sources */,
 				83C55D6D2EA127AE00915A46 /* ScannerView.swift in Sources */,
 				83C55D7E2EA132D000915A46 /* OpenFoodFactsService.swift in Sources */,
 				83C55D6F2EA127CD00915A46 /* HistoryView.swift in Sources */,
 				83C55D742EA12E2F00915A46 /* ScannedCodeView.swift in Sources */,
+				83C55D8F2EA1630800915A46 /* OFFProduct.swift in Sources */,
 				83C55D652EA11F9800915A46 /* ContentView.swift in Sources */,
 				83C55D7A2EA132A700915A46 /* ProductResponse.swift in Sources */,
 				83C55D882EA1384D00915A46 /* ScanStorage.swift in Sources */,
 				83C55D7C2EA132B700915A46 /* Product.swift in Sources */,
 				83C55D802EA1354400915A46 /* WebView.swift in Sources */,
+				83C55D912EA1633200915A46 /* ProductCardView.swift in Sources */,
 				83C55D712EA127E800915A46 /* DetailView.swift in Sources */,
 				83C55D662EA11F9800915A46 /* ScanCodeAppApp.swift in Sources */,
 				83C55D8A2EA13AD300915A46 /* HistoryViewModel.swift in Sources */,

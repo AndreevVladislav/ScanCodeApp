@@ -31,10 +31,24 @@ struct DetailView: View {
             }
 
             if let details = scan.detailsJSON, !details.isEmpty {
-                Section("Доп. данные") {
-                    Text(details)
-                        .font(.caption)
-                    
+                Section(header: Text("Доп. данные")) {
+                    if let ingredients = extractIngredients(from: details), !ingredients.isEmpty {
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("Ингредиенты")
+                                .font(.headline)
+
+                            Text(ingredients)
+                                .font(.callout)
+                                .foregroundStyle(.secondary)
+                                .lineSpacing(3)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                        }
+                        .padding(12)
+                        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12))
+                    } else {
+                        Text("Ингредиенты не найдены")
+                            .foregroundStyle(.secondary)
+                    }
                 }
             }
         }
