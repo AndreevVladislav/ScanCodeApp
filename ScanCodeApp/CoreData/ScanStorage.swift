@@ -8,6 +8,7 @@
 import Foundation
 import CoreData
 
+// Класс сохранения продукта в кеш
 final class ScanStorage {
     static let shared = ScanStorage()
     private let context = PersistenceController.shared.container.viewContext

@@ -7,12 +7,14 @@
 
 import Foundation
 
+// Класс получения информации о продукте
 final class OpenFoodFactsService {
+    
     static let shared = OpenFoodFactsService()
     private init() {}
 
     func fetchProduct(barcode: String) async throws -> Product {
-        let urlString = "https://world.openfoodfacts.org/api/v0/product/\(barcode).json"
+        let urlString = "\(Constants.API.baseURL)/product/\(barcode).json"
         guard let url = URL(string: urlString) else { throw APIError.invalidURL }
 
         let (data, response) = try await URLSession.shared.data(from: url)

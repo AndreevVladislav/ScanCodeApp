@@ -9,13 +9,6 @@ import Foundation
 import SwiftUI
 import AVFoundation
 
-/// Обёртка для сканированного кода, чтобы использовать `.sheet(item:)`
-struct ScannedCodeItem: Identifiable {
-    let id = UUID()
-    let value: String
-    let type: String
-}
-
 struct ScannerView: View {
     @State private var isTorchOn = false
     @State private var scannedCode: ScannedCodeItem?

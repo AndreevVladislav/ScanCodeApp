@@ -26,6 +26,8 @@
 		83C55D8D2EA162E600915A46 /* OFFResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C55D8C2EA162E600915A46 /* OFFResponse.swift */; };
 		83C55D8F2EA1630800915A46 /* OFFProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C55D8E2EA1630800915A46 /* OFFProduct.swift */; };
 		83C55D912EA1633200915A46 /* ProductCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C55D902EA1633200915A46 /* ProductCardView.swift */; };
+		83C55D952EA1CC5C00915A46 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C55D942EA1CC5C00915A46 /* Constants.swift */; };
+		83C55D972EA1CDAD00915A46 /* ScannedCodeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C55D962EA1CDAD00915A46 /* ScannedCodeItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		83C55D8C2EA162E600915A46 /* OFFResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OFFResponse.swift; sourceTree = "<group>"; };
 		83C55D8E2EA1630800915A46 /* OFFProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OFFProduct.swift; sourceTree = "<group>"; };
 		83C55D902EA1633200915A46 /* ProductCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardView.swift; sourceTree = "<group>"; };
+		83C55D942EA1CC5C00915A46 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		83C55D962EA1CDAD00915A46 /* ScannedCodeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannedCodeItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 				83C55D8C2EA162E600915A46 /* OFFResponse.swift */,
 				83C55D7B2EA132B700915A46 /* Product.swift */,
 				83C55D8E2EA1630800915A46 /* OFFProduct.swift */,
+				83C55D962EA1CDAD00915A46 /* ScannedCodeItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				83C55D602EA11F9800915A46 /* Assets.xcassets */,
+				83C55D942EA1CC5C00915A46 /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -239,6 +245,7 @@
 				83C55D8D2EA162E600915A46 /* OFFResponse.swift in Sources */,
 				83C55D762EA12E4B00915A46 /* ScannerCoordinator.swift in Sources */,
 				83C55D832EA1377B00915A46 /* CodeScannerModel.xcdatamodeld in Sources */,
+				83C55D972EA1CDAD00915A46 /* ScannedCodeItem.swift in Sources */,
 				83C55D6D2EA127AE00915A46 /* ScannerView.swift in Sources */,
 				83C55D7E2EA132D000915A46 /* OpenFoodFactsService.swift in Sources */,
 				83C55D6F2EA127CD00915A46 /* HistoryView.swift in Sources */,
@@ -251,6 +258,7 @@
 				83C55D912EA1633200915A46 /* ProductCardView.swift in Sources */,
 				83C55D712EA127E800915A46 /* DetailView.swift in Sources */,
 				83C55D662EA11F9800915A46 /* ScanCodeAppApp.swift in Sources */,
+				83C55D952EA1CC5C00915A46 /* Constants.swift in Sources */,
 				83C55D8A2EA13AD300915A46 /* HistoryViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

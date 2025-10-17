@@ -37,7 +37,7 @@ struct DetailView: View {
                     }()
 
                     Text("Содержимое: \(raw)")
-                        .foregroundStyle(isValidLink ? .blue : .white)
+                        .foregroundStyle(isValidLink ? .blue : .primary)
                         .underline(isValidLink, color: .blue)
                         .onTapGesture {
                             if isValidLink, let url = URL(string: raw) {
@@ -73,14 +73,40 @@ struct DetailView: View {
         .navigationTitle(scan.titleText ?? "Детали")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-            Button(isEditing ? "Сохранить" : "Изменить") {
-                if isEditing {
-                    onRename?(newTitle)
-                } else {
-                    newTitle = scan.titleText ?? ""
+            ToolbarItem(placement: .navigationBarTrailing) {
+                ShareLink(item: shareText) {
+                    Label("Поделиться", systemImage: "square.and.arrow.up")
                 }
-                isEditing.toggle()
+            }
+            
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(isEditing ? "Сохранить" : "Изменить") {
+                    if isEditing {
+                        onRename?(newTitle)
+                    } else {
+                        newTitle = scan.titleText ?? ""
+                    }
+                    isEditing.toggle()
+                }
             }
         }
+    }
+    
+    // Текст, который будет отправляться при "Поделиться"
+    private var shareText: String {
+        var result = ""
+        if let title = scan.titleText {
+            result += "Название: \(title)\n"
+        }
+        if let type = scan.codeType {
+            result += "Тип: \(type)\n"
+        }
+        if let raw = scan.rawValue {
+            result += "Содержимое: \(raw)\n"
+        }
+        if let details = scan.detailsJSON, !details.isEmpty {
+            result += "\nДоп. информация:\n\(details)"
+        }
+        return result
     }
 }

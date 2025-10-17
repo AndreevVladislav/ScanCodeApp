@@ -8,6 +8,7 @@
 import Foundation
 import CoreData
 
+// Синглтон, который управляет Core Data стеком
 final class PersistenceController {
     static let shared = PersistenceController()
     let container: NSPersistentContainer

@@ -20,22 +20,6 @@ struct OFFProduct: Decodable {
     let stores: String?
 }
 
-func parseOFFProduct(from jsonString: String) -> OFFProduct? {
-    guard let data = jsonString.data(using: .utf8) else { return nil }
-    do {
-        let decoded = try JSONDecoder().decode(OFFResponse.self, from: data)
-        return decoded.product
-    } catch {
-        // На случай если ты сохраняешь в detailsJSON сам "product" без обёртки:
-        do {
-            let product = try JSONDecoder().decode(OFFProduct.self, from: data)
-            return product
-        } catch {
-            return nil
-        }
-    }
-}
-
 // упрощенная модель товара
 private struct OFFSlim: Decodable {
     let product_name: String?

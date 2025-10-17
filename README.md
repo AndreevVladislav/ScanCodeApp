@@ -41,7 +41,8 @@ ScanCodeApp/
 │  └─ CodeScannerModel.xcdatamodeld/   # Модель Core Data: ScannedCode
 ├─ Model/
 │  ├─ Product.swift                    # Модель ответа API (Codable)
-│  └─ OFFProduct                       # Модель ответа API (Codable)
+│  ├─ ScannedCodeItem.swift            # Обёртка для сканированного кода, чтобы использовать `.sheet(item:)`
+│  └─ OFFProduct                       # Модель для парсинга JSON в окне детали
 ├─ View/
 │  ├─ ContentView.swift                # TabView: Сканер / История
 │  ├─ DetailView.swift                 # Экран деталей сохранённого скана
