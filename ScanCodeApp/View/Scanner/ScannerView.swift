@@ -7,20 +7,25 @@
 
 import Foundation
 import SwiftUI
+import AVFoundation
+
+/// Обёртка для сканированного кода, чтобы использовать `.sheet(item:)`
+struct ScannedCodeItem: Identifiable {
+    let id = UUID()
+    let value: String
+    let type: String
+}
 
 struct ScannerView: View {
     @State private var isTorchOn = false
-    @State private var scannedCode: String?
-    @State private var isShowingResult = false
+    @State private var scannedCode: ScannedCodeItem?
 
     var body: some View {
         ZStack {
             // Камера
             CameraScannerView(onCodeScanned: { value, type in
-                // предотвращаем повторное срабатывание
                 if scannedCode == nil {
-                    scannedCode = value
-                    isShowingResult = true
+                    scannedCode = ScannedCodeItem(value: value, type: type.rawValue)
                 }
             }, isTorchOn: $isTorchOn)
             .edgesIgnoringSafeArea(.all)
@@ -52,10 +57,8 @@ struct ScannerView: View {
             }
         }
         .navigationTitle("Сканирование")
-        .sheet(isPresented: $isShowingResult, onDismiss: { scannedCode = nil }) {
-            if let code = scannedCode {
-                ScannedCodeView(code: code)
-            }
+        .sheet(item: $scannedCode, onDismiss: { scannedCode = nil }) { codeItem in
+            ScannedCodeView(code: codeItem.value)
         }
     }
 }

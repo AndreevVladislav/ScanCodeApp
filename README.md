@@ -12,7 +12,6 @@
 - **Детальный экран результата**: исходное значение, базовый разбор содержимого, запрос к API товаров (если штрих‑код).
 - **Сохранение в историю** (Core Data) с возможностью **переименований** и **удаления** записей.
 - Вкладка **«История»** со списком сохранённых сканов, переходом в детали и редактированием названий.
-- Базовый **WebView** (WKWebView) — при необходимости можно открыть связанные ссылки.
 
 ---
 
@@ -38,15 +37,16 @@ ScanCodeApp/
 │  └─ OpenFoodFactsService.swift       # Загрузка info о продукте по штрих‑коду
 ├─ CoreData/
 │  ├─ PersistenceController.swift      # NSPersistentContainer
-│  └─ ScanStorage.swift                # CRUD‑операции с ScannedCode
+│  ├─ ScanStorage.swift                # CRUD‑операции с ScannedCode
+│  └─ CodeScannerModel.xcdatamodeld/   # Модель Core Data: ScannedCode
 ├─ Model/
 │  ├─ Product.swift                    # Модель ответа API (Codable)
-│  └─ CodeScannerModel.xcdatamodeld/   # Модель Core Data: ScannedCode
+│  └─ OFFProduct                       # Модель ответа API (Codable)
 ├─ View/
 │  ├─ ContentView.swift                # TabView: Сканер / История
 │  ├─ DetailView.swift                 # Экран деталей сохранённого скана
 │  ├─ HistoryView.swift                # Список истории
-│  ├─ WebView.swift                    # Обёртка над WKWebView (UIViewRepresentable)
+│  ├─ ProductCardView.swift            # Элемент отображения информайии о товаре (для примера выведена информация о составе)
 │  └─ Scanner/
 │     ├─ CameraScannerView.swift       # UIViewControllerRepresentable с AVCaptureSession
 │     ├─ ScannerCoordinator.swift      # Делегат AVCaptureMetadataOutputObjectsDelegate

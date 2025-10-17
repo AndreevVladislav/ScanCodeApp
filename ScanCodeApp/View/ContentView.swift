@@ -10,14 +10,14 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            NavigationView {
+            NavigationStack {
                 ScannerView()
             }
             .tabItem {
                 Label("Сканер", systemImage: "barcode.viewfinder")
             }
 
-            NavigationView {
+            NavigationStack {
                 HistoryView()
             }
             .tabItem {

@@ -16,53 +16,59 @@ struct HistoryView: View {
 
     var body: some View {
         NavigationView {
-            List {
-                ForEach(viewModel.scans, id: \.id) { scan in
-                    NavigationLink(destination: DetailView(scan: scan, onRename: { updatedTitle in
-                        viewModel.renameScan(scan, newTitle: updatedTitle)
-                    })) {
-                        HStack {
-                            if scan.codeType == "barcode" {
-                                Image(systemName: "barcode")
-                                    .font(.system(size: 36))
-                            } else {
-                                Image(systemName: "qrcode")
-                                    .font(.system(size: 36))
+            if viewModel.scans.isEmpty {
+                Text("Вы не отсканировали еще ни одного товара :(")
+                    .foregroundStyle(.primary)
+                    .font(.system(size: 28, weight: .bold))
+                    .multilineTextAlignment(.center)
+            } else {
+                List {
+                    ForEach(viewModel.scans, id: \.id) { scan in
+                        NavigationLink(destination: DetailView(scan: scan, onRename: { updatedTitle in
+                            viewModel.renameScan(scan, newTitle: updatedTitle)
+                        })) {
+                            HStack {
+                                if scan.codeType == "barcode" {
+                                    Image(systemName: "barcode")
+                                        .font(.system(size: 36))
+                                } else {
+                                    Image(systemName: "qrcode")
+                                        .font(.system(size: 36))
+                                }
+                                VStack(alignment: .leading) {
+                                    Text(scan.titleText ?? "Без названия")
+                                        .font(.headline)
+                                    Text(scan.codeType ?? "")
+                                        .font(.subheadline)
+                                        .foregroundColor(.secondary)
+                                    Text(scan.scannedAt ?? Date(), style: .date)
+                                        .font(.caption)
+                                        .foregroundColor(.gray)
+                                }
                             }
-                            VStack(alignment: .leading) {
-                                Text(scan.titleText ?? "Без названия")
-                                    .font(.headline)
-                                Text(scan.codeType ?? "")
-                                    .font(.subheadline)
-                                    .foregroundColor(.secondary)
-                                Text(scan.scannedAt ?? Date(), style: .date)
-                                    .font(.caption)
-                                    .foregroundColor(.gray)
-                            }
-                        }
-                        .swipeActions(edge: .trailing) {
-                            Button(role: .destructive) {
-                                viewModel.deleteScan(scan)
-                            } label: {
-                                Label("", systemImage: "trash")
-                            }
-                            Button {
-                                selectedScan = scan
-                                newTitle = scan.titleText ?? ""
-                                showRenameSheet = true
-                            } label: {
-                                Label("", systemImage: "pencil")
+                            .swipeActions(edge: .trailing) {
+                                Button(role: .destructive) {
+                                    viewModel.deleteScan(scan)
+                                } label: {
+                                    Label("", systemImage: "trash")
+                                }
+                                Button {
+                                    selectedScan = scan
+                                    newTitle = scan.titleText ?? ""
+                                    showRenameSheet = true
+                                } label: {
+                                    Label("", systemImage: "pencil")
+                                }
                             }
                         }
                     }
                 }
+                .sheet(isPresented: $showRenameSheet) {
+                    renameSheet
+                }
             }
-            .navigationTitle("Сохранённые коды")
-            .sheet(isPresented: $showRenameSheet) {
-                renameSheet
-            }
-            Spacer()
         }
+        
     }
 
     private var renameSheet: some View {

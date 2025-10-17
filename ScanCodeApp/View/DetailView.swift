@@ -25,9 +25,27 @@ struct DetailView: View {
                         .font(.headline)
                 }
                 Text("Тип кода: \(scan.codeType ?? "—")")
+                
                 if let raw = scan.rawValue {
+                    let isValidLink = {
+                        if let url = URL(string: raw),
+                           let scheme = url.scheme?.lowercased(),
+                           (scheme == "http" || scheme == "https") {
+                            return true
+                        }
+                        return false
+                    }()
+
                     Text("Содержимое: \(raw)")
+                        .foregroundStyle(isValidLink ? .blue : .white)
+                        .underline(isValidLink, color: .blue)
+                        .onTapGesture {
+                            if isValidLink, let url = URL(string: raw) {
+                                UIApplication.shared.open(url)
+                            }
+                        }
                 }
+                
             }
 
             if let details = scan.detailsJSON, !details.isEmpty {
@@ -53,6 +71,7 @@ struct DetailView: View {
             }
         }
         .navigationTitle(scan.titleText ?? "Детали")
+        .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             Button(isEditing ? "Сохранить" : "Изменить") {
                 if isEditing {
